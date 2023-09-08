@@ -1,25 +1,27 @@
-.container__small-card{
-  width: 700px;
+.container__small-card {
+  max-width: 700px;
   margin-bottom: 15px;
+  margin-left: 40px;
 }
 
-.container__small-card-content{
+.container__small-card-content {
   display: flex;
   flex-direction: row;
+  align-items: center; /* Alinhar verticalmente */
 }
 
-.small-card__pic > img{
+.small-card__pic > img {
   width: 200px;
-  min-width: 200px;
   margin-right: 20px;
 }
 
-.small-card__title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.small-card__title > h1 > a {
+  color: #ff9f36;
+  text-shadow: 1px 1px 2px #b65a39;
+  word-wrap: break-word;
+  font-size: 20px;
 }
 
-.container__small-card__separator{
+.container__small-card__separator {
   margin-top: 10px;
 }
