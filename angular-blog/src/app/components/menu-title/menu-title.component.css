@@ -1,0 +1,24 @@
+.container__menu-title {
+  color: #ff9f36;
+  text-shadow: 1px 1px 2px #ff4500;
+  margin-left: 15px;
+}
+
+.container__menu-title > h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: cursive;
+  font-size: 135px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.title-image {
+  margin-left: 10px;
+  height: 50%;
+  width: 15%;
+  max-height: 135px;
+}
+
+
