@@ -12,6 +12,8 @@ export class ContentComponent implements OnInit {
   picCover:string = ""
   contentTitle:string = ""
   contentDescription:string = ""
+  contentPic:string = ""
+  secondDescription:string = ""
   private id: string | null = "0"
 
   constructor(private route:ActivatedRoute){}
@@ -29,6 +31,8 @@ export class ContentComponent implements OnInit {
     this.picCover = result.picCover
     this.contentTitle = result.title
     this.contentDescription = result.description
+    this.contentPic = result.contentPic ?? ''
+    this.secondDescription = result.secondDescription ?? ''
 
   }
 
