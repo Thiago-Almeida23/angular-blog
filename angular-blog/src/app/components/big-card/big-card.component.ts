@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-big-card',
@@ -7,22 +7,39 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BigCardComponent implements OnInit {
 
-  @Input()
-  picCover: string = ""
-  @Input()
-  cardTitle: string = ""
-  @Input()
-  cardDescription: string = ""
-  @Input()
-  contentPic: string = ""
-  @Input()
-  secondDescription: string = ""
-  @Input()
-  Id: string = "0"
+  @Input() picCover: string = ""
+  @Input() cardTitle: string = ""
+  @Input() cardDescription: string = ""
+  @Input() contentPic: string = ""
+  @Input() secondDescription: string = ""
+  @Input() Id: string = "0"
 
-  constructor(){}
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+    const imageElement = this.el.nativeElement.querySelector('#imageModalTrigger');
+    if (imageElement) {
+      this.renderer.listen(imageElement, 'click', () => this.openModal());
+    }
 
+    const closeModalElement = this.el.nativeElement.querySelector('#closeModal');
+    if (closeModalElement) {
+      this.renderer.listen(closeModalElement, 'click', () => this.closeModal());
+    }
+  }
 
+  openModal() {
+    const modalElement = this.el.nativeElement.querySelector('#imageModal');
+    if (modalElement) {
+      modalElement.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    const modalElement = this.el.nativeElement.querySelector('#imageModal');
+    if (modalElement) {
+      modalElement.style.display = 'none';
+    }
+  }
 }

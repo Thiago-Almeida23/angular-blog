@@ -2,7 +2,6 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-background-color: #111111;
 font-family: cursive;
 }
 
@@ -11,3 +10,8 @@ a{
 }
 
 
+
+body{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0.9192927170868347) 0%, rgba(70,16,2,1) 20%, rgba(43,18,1,1) 100%);
+}

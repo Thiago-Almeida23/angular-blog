@@ -1,5 +1,5 @@
 <div class="container__big-card">
-  <div class="big-card__pic">
+  <div class="big-card__pic" id="imageModalTrigger">
     <img
       src="{{ picCover }}"
       alt=""
@@ -17,5 +17,12 @@
         {{ cardDescription }}
       </a>
     </p>
+  </div>
+</div>
+
+<div class="modal" id="imageModal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <img src="{{ picCover }}" alt="Imagem em modal">
   </div>
 </div>

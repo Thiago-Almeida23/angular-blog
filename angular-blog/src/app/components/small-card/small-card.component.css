@@ -13,6 +13,11 @@
 .small-card__pic > img {
   width: 200px;
   margin-right: 20px;
+	transition: transform .8s;
+}
+
+.small-card__pic > img:hover{
+  transform: scale(1.1);
 }
 
 .small-card__title > h1 > a {
